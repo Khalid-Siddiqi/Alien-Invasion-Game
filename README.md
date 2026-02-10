@@ -1,2 +1,4 @@
 # Alien Invasion Game
-A Python BAsed Alien Invasion Game
+A Python Based Alien Invasion Game
+
+## Description
