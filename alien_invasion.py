@@ -15,6 +15,7 @@ class AlienInvasion:
         while True:
             #Watch for keyboard and mouse events
             for event in pygame.event.get():
+                # when player clicks on close button this event is generated and sys.exit() is called to close the window
                 if event.type == pygame.QUIT:
                     sys.exit()
 
