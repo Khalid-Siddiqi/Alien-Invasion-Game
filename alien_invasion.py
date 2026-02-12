@@ -8,6 +8,7 @@ class AlienInvasion:
         pygame.init()
         self.screen = pygame.display.set_mode((1200, 800))
         self.clock = pygame.time.Clock()
+        self.bg_color = (200,200,200)
         ## pygame.display.set_mode is a surface, this particular surface is where game elements will be displayed
         pygame.display.set_caption("Alien Invasion")
 
@@ -19,6 +20,7 @@ class AlienInvasion:
                 # when player clicks on close button this event is generated and sys.exit() is called to close the window
                 if event.type == pygame.QUIT:
                     sys.exit()
+            self.screen.fill(self.bg_color)
 
             pygame.display.flip()
             self.clock.tick(60)
