@@ -6,3 +6,6 @@ The player controls the rocket ship at bottom centre of screen. The player can m
 
 Day 01 (11/02/2026)
 Setup the enviroment
+Day 02 (12/02/2026)
+create settinngs.py
+readfrom page 230 tp 234
