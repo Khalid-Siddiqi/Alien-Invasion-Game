@@ -19,7 +19,7 @@ class AlienInvasion:
         while True:
             self._check_events()
             self._update_screen()
-            self.clock.tick(60)
+            
             #Watch for keyboard and mouse events
     def _check_events(self):
         """Respond to keypresses and mouse events."""
@@ -34,7 +34,7 @@ class AlienInvasion:
         self.ship.blitme()
         
         pygame.display.flip()
-    
+        self.clock.tick(60)
 # read the documentation for pygame.display.flip() to understand why it is used here. It is used to make the most recently drawn screen visible. In this case, it updates the
 if __name__ == '__main__':
     ai = AlienInvasion()
