@@ -17,16 +17,20 @@ class AlienInvasion:
     def run_game(self):
         """Starting the main loop for the game"""
         while True:
+            self._check_events()
             #Watch for keyboard and mouse events
-            for event in pygame.event.get():
-                # when player clicks on close button this event is generated and sys.exit() is called to close the window
-                if event.type == pygame.QUIT:
-                    sys.exit()
-            #fill background with this colour
-            self.screen.fill(self.settings.bg_color)
-            self.ship.blitme()
-            pygame.display.flip()
-            self.clock.tick(60)
+    def _check_events(self):
+        """Respond to keypresses and mouse events."""
+        for event in pygame.event.get():
+            # when player clicks on close button this event is generated and sys.exit() is called to close the window
+            if event.type == pygame.QUIT:
+                sys.exit()
+        #fill background with this colour
+        self.screen.fill(self.settings.bg_color)
+        self.ship.blitme()
+        pygame.display.flip()
+        self.clock.tick(60)
+    
 # read the documentation for pygame.display.flip() to understand why it is used here. It is used to make the most recently drawn screen visible. In this case, it updates the
 if __name__ == '__main__':
     ai = AlienInvasion()
