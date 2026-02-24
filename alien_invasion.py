@@ -27,9 +27,12 @@ class AlienInvasion:
             # when player clicks on close button this event is generated and sys.exit() is called to close the window
             if event.type == pygame.QUIT:
                 sys.exit()
+    def _update_screen(self):
+        """Update images on the screen and flip to the new screen."""
         #fill background with this colour
         self.screen.fill(self.settings.bg_color)
         self.ship.blitme()
+        
         pygame.display.flip()
     
 # read the documentation for pygame.display.flip() to understand why it is used here. It is used to make the most recently drawn screen visible. In this case, it updates the
